@@ -82,4 +82,55 @@ Python, Pandas, NumPy, NetworkX, Matplotlib, Cosine Similarity, Louvain Method
 
 
 
+# AE3 IMDb Top 1000 Movies Analysis
+
+## Project Overview
+This project analyzes the top 1000 movies on IMDb to uncover patterns and trends that influence movie popularity and success. By exploring features such as ratings, genres, runtime, release year, and gross earnings, the project aims to provide insights for data analysts, film professionals, and movie enthusiasts.
+
+## Data Source
+The dataset contains information about the top 1000 movies on IMDb, including:
+- Title, Release Year, Certificate  
+- Runtime, Genre  
+- IMDB Rating, Meta Score  
+- Director, Number of Votes, Gross Earnings  
+
+## Key Steps
+
+### 1. Data Preparation
+- Removed unnecessary columns (Poster_Link, Star1–4).  
+- Converted runtime and gross to numeric formats.  
+- Handled missing values and removed duplicates.  
+- Renamed columns for clarity.
+
+### 2. Exploratory Data Analysis (EDA)
+- Visualized distributions of IMDB ratings, gross earnings, and number of votes.  
+- Generated summary statistics to identify trends and outliers.
+
+### 3. K-Nearest Neighbors (K-NN) Classification
+- Created a binary target (`high_rating`) based on IMDB ratings (>8).  
+- Trained a K-NN classifier using features: Runtime, Meta_score, No_of_Votes, and Gross.  
+- Evaluated performance with accuracy metrics and confusion matrix.  
+
+### 4. K-Means and HDBSCAN Clustering
+- Standardized features and applied K-Means (k=3) and HDBSCAN for clustering movies.  
+- Visualized clusters to identify patterns in runtime, ratings, and meta scores.  
+- Determined optimal k for K-Means using silhouette analysis.  
+
+## Key Findings
+- Movies with higher Meta_score, runtime, votes, and gross tend to have higher ratings.  
+- Clustering reveals groups of movies with similar characteristics, highlighting patterns in runtime and ratings.  
+- K-NN model achieved an accuracy of ~70%, indicating a reasonable prediction ability based on selected features.
+
+## Tools & Libraries
+- Python, Pandas, NumPy  
+- Matplotlib, Seaborn for visualization  
+- scikit-learn for K-NN and K-Means  
+- HDBSCAN for density-based clustering  
+
+## Conclusion
+This analysis provides insights into what makes movies popular on IMDb, identifies patterns in ratings and earnings, and demonstrates classification and clustering techniques for understanding movie data.
+
+
+
+
 
