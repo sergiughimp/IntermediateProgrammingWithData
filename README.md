@@ -42,3 +42,44 @@ This project analyzes public conversations on Twitter about voice phishing (vish
 
 ## Tools & Libraries
 - Python, Pandas, Matplotlib, WordCloud, TextBlob, collections.Counter
+
+
+
+# AE2 Mastodon Moderation Network Analysis
+
+## Overview
+This project analyzes moderation activities on Mastodon, focusing on blocking reasons such as misinformation, spam, harassment, and hate speech. Using network analysis and cosine similarity, the project explores patterns of moderation across different instances and communities.
+
+## Key Steps
+1. **Data Loading & Cleaning**
+   - Loaded CSV dataset of moderation actions.
+   - Standardized blocking reasons and removed missing values.
+2. **Significant Moderation Filtering**
+   - Focused on major issues: misinformation, spam, harassment, hate speech.
+3. **Network Construction**
+   - Built a weighted network graph of users.
+   - Used cosine similarity to measure similarity in moderation behavior.
+4. **Community Detection**
+   - Applied the Louvain method to identify groups of instances with similar moderation patterns.
+5. **Visualization**
+   - Visualized the network and detected communities with color-coded layouts.
+   - Explored temporal trends and centrality measures for deeper insights.
+
+## Key Findings
+- **Misinformation & Spam** are the most common moderation reasons across instances.
+- **Harassment & Hate Speech** are more targeted, appearing in specific communities.
+- Communities reveal both widespread moderation patterns and niche behaviors.
+- Certain nodes are central in bridging communities, influencing moderation dynamics.
+
+## Lessons Learned
+- Preprocessing and filtering are crucial for meaningful network analysis.
+- Louvain method effectively detects communities, but interpretation requires context.
+- Visualization clarity is essential for large, complex networks.
+- Scalability and interactive visualizations are areas for future improvement.
+
+## Tools & Libraries
+Python, Pandas, NumPy, NetworkX, Matplotlib, Cosine Similarity, Louvain Method
+
+
+
+
